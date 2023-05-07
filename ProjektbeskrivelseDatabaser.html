@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="MyStyle.css">
+<meta charset="UTF-8">
+</head>
+<body>
+<div class="header">
+  <h1>Portfolio - informatik</h1>
+</div>
+    
+<div class="topnav">
+  <a href="Index.html">Hovedmenu</a>
+  <a href = "Information%20om%20mig.html"  target = "_blank">Lidt om mig</a>
+  <a href = "Projektbeskrivelse%20-%20Webteknologier.html" target="_blank">Webteknologier</a>
+  <a href="It-sikkerhed.html" target="_blank">IT-sikkerhed</a>
+<a href="AstroPi.html">AstroPi</a>
+<a href="SpilLeg.html">Spil</a>
+<a href="ProjektbeskrivelseDatabaser.html">Databaser</a>
+    
+</div>
+
+<h1>Forløb 5: Databaser</h1>
+    
+<div class="kasse">
+<br>
+I dette forløb har vi arbejdet med databaser og implementeret dem i en simpel version på vores hjemmesider. 
+<br>
+<br>
+<br>
+<h3>Link til hjemmeside med implementeret database:</h3> <a href="Database.html" download><p>Rate frugterne</p></a>
+<br>
+<h3>Hvad er en database?:</h3>
+    En database er en organiseret samling af data. Databaser består typisk af tabeller, kolonner og rækker, der knytter data til hinanden i relationer. Vi implemeterer databasen med javascript, der har til formål at gøre hjemmesiden interaktiv/dynamisk. Det er altså denne del, der sørger for, at vi kan trykke på en knap og få information fra databasen frem på hjemmesiden. 
+    <br>
+    Det er vigtigt at normalisere en databse efter følgende normaliseringsregler: 
+    <br>
+    - Unik primærnøgle.
+    <br>
+- Ingen kolonne må være afhængig af andre kolonner end primærnøglen.
+    <br>
+- Der må kun være én datatype i hver kolonne.
+    <br>
+- Det samme data skal kun forekomme et sted - det modsatte kaldes redundans.
+    <br>
+- Data skal være relateret til hinanden.
+    <br>
+    <br>
+    <br>
+<h3>Krav til hjemmeside/database:</h3>
+- En html brugerflade hvor der er overvejt brugervenligheden, se teorien her interaktionsdesign.
+<br>
+- Data skal organiseres i en simpel database, regneark, som kan importeres som csv fil med javascript.
+<br>
+- Der skal redegøres for hvordan databasen kan normaliseres ved at gøre den til en relatinel database.
+    <br>
+    <br>
+    <br>
+    <h3>Vores hjemmeside/database:</h3>
+    Vi har lavet en database med frugter, billeder af frugter og et funfact om den pågældende frugt. 
+    Når billedet af frugten kommer frem på hjemmesiden, skal man kunne klikke på en knap og derved skal der komme et funfact om frugten op. 
+    <br>
+    <br>
+    <br>
+    <h3>Gennemgang af relevante kodestumper:</h3>
+    Herunder ses et udklip af koden. I linje 25 bruger vi koden script. For at kunne holde styr på data bruger vi biblioteket Papa som kan loades med denne kommando script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js">
+    <br>
+    I linje 31, 32, 33 og 34 laves knapperne og linje 28, 30, 35 henviser til databasen. 
+    <br>
+    <img src="kodedatabse.png" width="600" height="400">
+    <br>
+    Kode 2:
+    <br>
+    <img src="Databasebillede2.png" width="400" height="200">
+    <br>
+    Her ses en anden del af koden. Linje 67 giver en løkke hvor i=0 til at starte med, og i vokser med 1 ì++ for hver omgang. Løkken kører så længe at i < data.length altså så længe i er mindre end antallet af rækker i data. Betingelsen if (data[i]["ID"] == x) i linje 68 bruger primærnøglen ÌD og spørger om den er lig med x. Hvis den er det så skal overskrift og beskrivelse opdateres og løkken stoppes.
+    
+    
+</div>
+
+</body>
+</html>

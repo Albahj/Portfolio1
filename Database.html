@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="MyStyle.css">
+<meta charset="UTF-8">
+</head>
+<body>
+<div class="header">
+  <h1>Portfolio - informatik</h1>
+</div>
+    
+<div class="topnav">
+  <a href="Index.html">Hovedmenu</a>
+  <a href = "Information%20om%20mig.html"  target = "_blank">Lidt om mig</a>
+  <a href = "Projektbeskrivelse%20-%20Webteknologier.html" target="_blank">Webteknologier</a>
+  <a href="It-sikkerhed.html" target="_blank">IT-sikkerhed</a>
+<a href="AstroPi.html">AstroPi</a>
+<a href="SpilLeg.html">Spil</a>
+<a href="ProjektbeskrivelseDatabaser.html">Databaser</a>
+    
+</div>
+
+<html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<body>
+<h1>Rate frugterne</h1>
+<p id="overskrift"></p>
+<img id="myImage" src="Frugteroverblik.jpg" style="width: 50%;">
+<p id="beskrivelse"></p>
+<button type="button" onclick="ny()">Start</button>
+<button type="button" onclick="valgte()">Kan lide</button>
+<button type="button" onclick="valgte()">Kan ikke lide</button>
+<button type="button" onclick="ny()">Ny frugt</button>
+<p id="valg"></p>
+
+</body>
+</html>
+
+<script>
+  let x;
+  let FN;
+  let listeMedValgte = [];
+  let data;
+  var overskrift = null
+  var beskrivelse = null
+  var progression = null
+  var pic=null
+
+function ny() {
+  x = Math.floor(Math.random()*4+1);
+  genererTekst(x);
+  console.log(data); 
+  document.getElementById('overskrift').innerHTML = overskrift;
+  document.getElementById('beskrivelse').innerHTML = beskrivelse;
+  document.getElementById('myImage').src = pic;
+}
+
+function valgte(){
+  console.log(x);
+  console.log(FN);
+  listeMedValgte.push(overskrift)
+  document.getElementById('valg').innerHTML = listeMedValgte;
+}
+
+function genererTekst(x){
+  for (var i = 0; i < data.length; i++) {
+      if (data[i]["ID"] == x) {
+        overskrift = data[i]['overskrift']; 
+        beskrivelse = data[i]['beskrivelse'];
+        pic = data[i]['billede'];
+ 
+        break; // exit efter loop
+      }
+    }
+}
+window.onload = function() {
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "FN.csv", true);
+xhr.responseType = "text";
+xhr.onload = function() {
+  data = Papa.parse(xhr.responseText, {
+    header: true // set this to true if the first row contains the header names
+  }).data;
+};
+xhr.send();
+}
+</script>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="MyStyle.css">
+<meta charset="UTF-8">
+</head>
+<body>
+<div class="header">
+  <h1>Portfolio - informatik</h1>
+</div>
+    
+<div class="topnav">
+  <a href="Index.html">Hovedmenu</a>
+  <a href = "Information%20om%20mig.html"  target = "_blank">Lidt om mig</a>
+  <a href = "Projektbeskrivelse%20-%20Webteknologier.html" target="_blank">Webteknologier</a>
+  <a href="It-sikkerhed.html" target="_blank">IT-sikkerhed</a>
+<a href="AstroPi.html">AstroPi</a>
+<a href="SpilLeg.html">Spil</a>
+<a href="ProjektbeskrivelseDatabaser.html">Databaser</a>
+</div>
+
+<h1>Forløb 4: Spil, leg og samarbejde</h1>
+    
+<div class="kasse">
+<br>
+I dette forløb har vi udviklet et spil i p5.js. Vores spil hedder Pianotiles.  
+<br>
+<br>
+<h3>Link til vores spil/programkode:</h3> <a href="https://editor.p5js.org/sylle1234/full/X1RzXjb4_" download><p>Spil: Pianotiles</p></a>
+<a href="https://editor.p5js.org/sylle1234/sketches/X1RzXjb4_" download><p>Programkode: Pianotiles</p></a>
+<br>
+<h3>Ideer og krav til spillet:</h3>
+    Ideen bag spillet er, at skabe en måde, hvorpå man kan bevæge sig samtidig med, at man spiller. Målet var at lave et sjovt alternativ til unge, der bruger alt for lang tid stillesidende foran en skærm. 
+    <br>
+    <br>
+    Vi har udviklet vores spil på baggrund af disse krav:
+    <br>
+
+- Kan spilles af to eller flere personer, der fysisk er i nærheden af hinanden.
+    <br>
+- Involverer et samarbejdende eller konkurrerende element, gerne inspireret af sport.
+    <br>
+- Styres med Makey Makey og ikke direkte fra computeren.
+    <br>
+    <br>
+    <br>
+    <h3>Vores spil:</h3>
+    Vi har lavet et spil, der har til formål, at få folk til at samarbejde samt bevæge sig i fællesskab. Spillet kaldes "Pianotiles" og går ud på, at trykke på det sorte felt, der er tættest på bundlinjen. Trykkes der ikke på det sorte felt inden det rammer bundlinjen, dør man og spillet starter forefra. Det gælder om at opnå så høj en score som muligt. Hver gang spillet kører, starter der samtidig en sang, der spiller så længe, at man rammer de sorte felter. Denne funktion har til formål at motivere spillerne til at fortsætte, så man kan blive ved med at høre den gode sang. 
+     <br>
+    Spillet styres ved hjælp af Makey Makey. Man forbinder en ring af sølvpapir til sin sko og man kan derved bruge sine fødder til at ramme felterne. På den måde har vi koblet spil, leg og bevægelse i ét spil. Spillet kan spilles af 1-4 personer.
+    <br>
+    <br>
+    <br>
+    <h3>Billeder og videoer af spillet:</h3>
+    <img src="Spilfelter.jpg" width="200" height="200">
+    <img src="Spilbillede2.jpg" width="175" height="200">
+    <img src="Pianotilesbillede.png" width="200" height="200">
+    <img src="spilStartforfra.png" width="175" height="200">
+    <br>
+    <br>
+    <br>
+    <h3>Gennemgang af relevante kodestumper:</h3>
+    Generelt er JS opbygget af tre vigtige funktioner: 
+    <br>
+    - function setup()
+    <br>
+    - function draw()
+    <br>
+    - function keyPressed()
+    <br>
+    <br>
+    function setup() kører først. function draw() kører hele tiden i loop og alt i funktionen gentages til programmet sluttes. function keyPressed() kører når en tast bliver trykket ned. Derudover bruges der også en del "if-statements", der er en logisk betingelse, hvor noget bliver udført, hvis betingelsen er sand.
+    <br>
+    <img src="Spikode.png" width="400" height="400">
+     <br>
+    Herover ses et udklip af vores kode. Som det fremgår i linje 88, er dette et udklip af den del, der koder for hvad der skal ske, når man trykker på tasterne. Det er altså denne funktion, der sørger for, at man kan klikke på de sorte felter og spillet kan spilles. Vi har brugt if-statements til at skabe en betingelse for, hvornår trykket skal udføres og hvilke taster der skal bruges. Vi har valgt at bruge tasterne a, s, d, f, der koder for kasser i henholdsvis felt 1, 2, 3 ,4.  
+    <br>
+    <br>
+    I linje 102 har vi brugt et else-statement til at bestemme, hvad der skal ske hvis felterne ikke trykkes på. Her skal spillet altså restarte, sangen stoppe og scoren af antal sorte felter man har ramt vises.  
+    <br>
+    <br>
+    <br>
+    <h3>Afsluttende kommentar til ændringer på baggrund af brugertest:</h3>
+    Hvis vi skulle arbejde videre med vores spil, bør vi overveje, hvordan man kunne implemetere bevægelse i højere grad. Som det fungerer nu bevæger man sig, men ikke i så høj grad som vi først havde tænkt. Selve spillet fungerer fint og er underholdende. 
+    
+</div>
+
+</body>
+</html>
